@@ -1,4 +1,4 @@
-console.log('client side javascript file is loaded')
+console.log('client side javascript file is loaded!')
 //we will use this js file to fetch data by 'fetch' as this is only client side loaded js file which is loaded in index.hbs 
 //page only and node js does not provide us a method for non client side loaded js files to fetch data
 
