@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+      <title>Weather</title> 
+      <link rel="icon" href="/img/weather.png">
+        <!--this ./css/styles.css is relative path version-->
+      <link rel="stylesheet" href="./css/styles.css" >  <!--we can also use href="/css/styles.css" which is absolute path-->
+    
+     </head>
+    
+    <body>
+       <!-- <h1>{{title}}</h1>-->   <!--we provide input to hbs file from res.render method's object by the two curly brackets with 
+        property name inside them-->
+        <div class="main-content">
+           {{>header}}
+        <p>Use this site to get your weather!</p>
+        <form>
+          <input placeholder="Location">
+          <button>Search</button>
+        </form>
+
+        <p id="message-1"></p>
+        <p id="message-2"></p>
+        
+        </div>
+        {{>footer}}
+      <script src="/js/app.js"></script> <!--this javascript file's output will be printed in developer options's console tab in browser--> 
+       
+    </body>
+</html>
