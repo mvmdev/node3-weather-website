@@ -70,6 +70,7 @@ const path=require('path')
 const express=require('express')
 const app=express()  //this express function returns a object 
 const hbs=require('hbs')
+const port=process.env.PORT || 3000
 
 //7.loading the functions
 const geocode=require('./utils/geocode')
@@ -183,9 +184,9 @@ app.get('*',(req,res)=>
 //1.to start the server we use listen method with first parameter as port no and second is a callback function
 //which prints something on console only,not on web browser.The above res.send() method in app.get() 
 //method will send response message in browser
-app.listen(3000,()=>
+app.listen(port,()=>
 {
-    console.log('Server is up on 3000')
+    console.log('Server is up on '+port)
 })
 
 //7.copy the utils folder from weather app inside src folder and also install request npm module

@@ -22,7 +22,7 @@ const search=document.querySelector('input') //also include the input element to
 //the document.querySelector('element') method searches for the 'element' in the index.hbs file from top
 //to bottom, but when it finds the element at the top it stops there and gives back the element in this file
 //so for linking the paragraph element <p> which is after <form> element in index.hbs we will give the
-//<p>  element a unique name
+//<p>  element a unique name in index.hbs file
 
 const messageOne=document.querySelector('#message-1') //'#'is used for id's
 const messageTwo=document.querySelector('#message-2')
@@ -39,7 +39,9 @@ weatherform.addEventListener('submit',(e)=>
     
     const location=search.value //take out value from input
 
-    fetch('http://localhost:3000/weather?address='+location).then((response)=>
+    //fetch('http://localhost:3000/weather?address='+location).then((response)=>
+    //chnaged the url for heroku and local host
+    fetch('/weather?address='+location).then((response)=>
 {
     //here u can use any paramter in then's callback function, we have used 'data' as a parameter
     //and 'data' is nothing but a object which get provided by response.json() when whole data is recieved by response
